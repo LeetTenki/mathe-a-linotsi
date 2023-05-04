@@ -1,0 +1,596 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>MATHE-A-LINOTSI</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet'
+          type='text/css' />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!--main-->
+    <div class="container" id="home">
+        <!-- page preloader -->
+        <div id="preloader">
+            <span></span>
+        </div>
+        <div class="row">
+            <!--left-->
+            <div class="col-md-3" id="leftCol">
+                <div id="sidecontainer" data-spy="affix" data-offset-top="0">
+                    <div class="logo">
+                        <div id="sidebar-toggler" class="visible-xs visible-sm">
+                            <span class="glyphicon glyphicon-align-justify glyphicon-th-large"></span>
+                        </div>
+                        <!--<img src="LOGO.PNG" class="img-responsive" alt="Put Your Logo Image Here" />-->
+                        <span class="hidden-xs hidden-sm">
+                            <a href="#home">MATHE A LINOTSI</a>
+                        </span>
+                    </div>
+                    <ul class="nav nav-stacked menu" id="sidebar">
+                        <li><a href="#sec-first">Home</a> </li>         
+                        <!--li><a href="#sec-carousel">Carousel</a> </li-->
+                        <li><a href="#sec-gallery">Our Products </a> </li>
+                        <li>
+                            <a href="#sec-text">Our Team</a>
+                            <!--ul class="nav nav-stacked collapse">
+                                <li><a href="#sec-offer" class="nav-sub">Offers</a></li>
+                                <li><a href="#sec-grid" class="nav-sub">Grid</a></li>
+                                <li><a href="#sec-testimonials" class="nav-sub">Testimonials</a></li>
+                                <li><a href="#sec-pricing" class="nav-sub">Pricing</a></li>
+                            </ul-->
+                        </li>
+                        <li><a href="#sec-contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--/left-->
+            <!--right-->
+            <div class="col-md-9">
+                <!--welcome section-->
+                <section id="sec-first" data-bg="today.png">
+                    <script src=snow.js></script>
+                    <script>
+                        snow.start({
+                            maxRadius: 4,
+                            flakeCount: 3000,
+                            stickingRatio: 2,
+                            wind: -2
+                        });
+                
+                        var	messageTimer,
+                            gid = document.getElementById.bind(document),
+                            start = gid("start"),
+                            stop = gid("stop"),
+                            message = gid("message"),
+                            buttons = gid("buttons"),
+                            dialog = gid("dialog");
+                
+                        function tell(txt){
+                            clearTimeout(messageTimer);
+                            message.textContent = txt;
+                            messageTimer = setTimeout(function(){
+                                message.textContent = "";
+                            }, 15000);
+                        }
+                
+                        stop.onclick = function(){
+                            this.disabled = true;
+                            snow.stop();
+                            tell("Snow progressively stops falling");
+                        }
+                
+                        function makeOptions(){
+                            var options = {};
+                            options.stickingRatio = +(gid("stickingRatio").value/50).toFixed(1);
+                            options.wind = Math.round(gid("wind").value/5-10);
+                            options.flakeCount = Math.round(Math.pow(gid("count").value, 1.8495));
+                            options.maxRadius = +(gid("radius").value/30+1.2).toFixed(1);
+                            return options;
+                        }
+                
+                        function fillPreview(){
+                            gid("preview").innerHTML = "snow.start(" + JSON.stringify(makeOptions(), null, "\t") + ");";
+                        }
+                
+                        [].forEach.call(document.querySelectorAll("input"), function(input){
+                            input.onchange = fillPreview;
+                        });
+                
+                        start.onclick = function(){
+                            dialog.style.display = "flex";
+                            buttons.style.display = "none";
+                        }
+                
+                        cancel.onclick = function(){
+                            dialog.style.display = "none";
+                            buttons.style.display = "flex";
+                        }
+                
+                        ok.onclick = function(){
+                            dialog.style.display = "none";
+                            buttons.style.display = "flex";
+                            stop.disabled = false;
+                            snow.start(makeOptions());
+                            message.textContent = "";
+                        }
+                
+                        fillPreview();
+                    </script>
+                
+
+
+
+
+
+
+                    <div class="jumbotron">
+                        <h1 class="animation" data-animation-effect="fadeInUp" data-animation-delay="0.5s">RE HAHLAULA BOLACHA</h1>
+                        <hr class="animation" data-animation-effect="fadeInLeft" data-animation-delay="0.7s" />
+                        <p class="animation" data-animation-effect="fadeIn" data-animation-delay="0.6s">
+                            <img src="today.png">
+                        </p>
+                        <div class="space-sm"></div>
+                        <a href="#sec-carousel" class="scroll">
+                            <i class="glyphicon glyphicon-chevron-down animation animation" data-animation-effect="fadeIn" data-animation-delay="1s"></i>
+                        </a>
+                    </div>
+                </section>
+                <!--carousel section-->
+                <section id="sec-carousel" data-bg="https://s3.amazonaws.com/uneaty2/images/bg/bg-01.jpg">
+                    <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators animation" data-animation-effect="fadeIn" data-animation-delay="0.1s">
+                            <li data-target="#mainCarousel" data-slide-to="0" class="active"> <i class="glyphicon glyphicon-leaf"></i> </li>
+                            <li data-target="#mainCarousel" data-slide-to="1"><i class="glyphicon glyphicon-globe"></i> </li>
+                            <li data-target="#mainCarousel" data-slide-to="2"><i class="glyphicon glyphicon-thumbs-up"></i> </li>
+                        </ol>
+                        <!-- Main Carousel -->
+                        <div class="carousel-inner">
+                    
+                            </div-->
+                            <!-- Carousel Item #3 -->
+                            <div class="item">
+                       
+                            </div>
+
+                        </div>
+                        <!-- uncomment this to have next/prev buttons -->
+                        <!--<a class="left carousel-control" href="#mainCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#mainCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>-->
+                    </div>
+                </section>
+                <!-- gallery section -->
+                <section id="sec-gallery" data-bg="today.png">
+                    <div class="filtercontrols">
+                        <button class="filter btn-custom active animation" data-filter="all" data-animation-effect="fadeInLeft" data-animation-delay="0.1s" data-animation-duration="0.5s">All</button>
+                        <button class="filter btn-custom animation" data-filter=".category-1" data-animation-effect="fadeInLeft" data-animation-delay="0.3s" data-animation-duration="0.7s">Video<s/button>
+                        <button class="filter btn-custom animation" data-filter=".category-2" data-animation-effect="fadeInLeft" data-animation-delay="0.5s" data-animation-duration="0.9s">Videos2</button>
+                        <button class="filter btn-custom animation" data-filter=".category-3" data-animation-effect="fadeInLeft" data-animation-delay="0.7s" data-animation-duration="1.1s">Photos</button>
+                    </div>
+                    <div id="filtercontainer" class="filtercontainer animation" data-animation-effect="fadeIn">
+                        <div class="mix category-1" data-myorder="1">
+                            <a data-toggle="modal" data-target="#gallery-modal-1">
+                                <img src="today.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="mix category-2 category-3" data-myorder="2">
+                            <a data-toggle="modal" data-target="#gallery-modal-2">
+                                <img src="today.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="mix category-2" data-myorder="3">
+                            <a data-toggle="modal" data-target="#gallery-modal-3">
+                                <img src="today.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="mix category-1 category-3" data-myorder="4">
+                            <a data-toggle="modal" data-target="#gallery-modal-4">
+                                <img src="today.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="mix category-3" data-myorder="5">
+                            <a data-toggle="modal" data-target="#gallery-modal-5">
+                                <img src="today.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="mix category-1 category-3" data-myorder="6">
+                            <a data-toggle="modal" data-target="#gallery-modal-6">
+                                <img src="today.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="mix category-1" data-myorder="7">
+                            <a data-toggle="modal" data-target="#gallery-modal-7">
+                                <img src="today.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="mix category-2 category-3 category-1" data-myorder="8">
+                            <a data-toggle="modal" data-target="#gallery-modal-8">
+                                <img src="today.png" alt="" />
+                            </a>
+                        </div>
+
+   
+                    </div>
+                    <!-- Modal 1 -->
+                    <div class="modal fade" id="gallery-modal-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-custom">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="today.png" class="img-responsive" alt="" />
+                                </div>
+                                <div class="modal-footer animation" data-animation-effect="fadeInUp" data-animation-delay=".3s">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End of Modal -->
+                    <!-- Modal 2 -->
+                    <div class="modal fade" id="gallery-modal-2" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-custom">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="today.png" class="img-responsive" alt="" />
+                                </div>
+                                <div class="modal-footer animation" data-animation-effect="fadeInUp" data-animation-delay=".3s">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End of Modal -->
+                    <!-- Modal 3 -->
+                    <div class="modal fade" id="gallery-modal-3" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-custom">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="today.png" class="img-responsive" alt="" />
+                                </div>
+                                <div class="modal-footer animation" data-animation-effect="fadeInUp" data-animation-delay=".3s">
+t.
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End of Modal -->
+                    <!-- Modal 4 -->
+                    <div class="modal fade" id="gallery-modal-4" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-custom">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="today.png" class="img-responsive" alt="" />
+                                </div>
+                                <div class="modal-footer animation" data-animation-effect="fadeInUp" data-animation-delay=".3s">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End of Modal -->
+                    <!-- Modal 5 -->
+                    <div class="modal fade" id="gallery-modal-5" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-custom">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="today.png" class="img-responsive" alt="" />
+                                </div>
+                                <div class="modal-footer animation" data-animation-effect="fadeInUp" data-animation-delay=".3s">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End of Modal -->
+                    <!-- Modal 6 -->
+                    <div class="modal fade" id="gallery-modal-6" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-custom">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="today.png" class="img-responsive" alt="" />
+                                </div>
+                                <div class="modal-footer animation" data-animation-effect="fadeInUp" data-animation-delay=".3s">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End of Modal -->
+                    <!-- Modal 7 -->
+                    <div class="modal fade" id="gallery-modal-7" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-custom">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="" class="img-responsive" alt="" />
+                                </div>
+                                <div class="modal-footer animation" data-animation-effect="fadeInUp" data-animation-delay=".3s">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End of Modal -->
+                    <!-- Modal 8 -->
+                    <div class="modal fade" id="gallery-modal-8" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-custom">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="today.png" class="img-responsive" alt="" />
+                                </div>
+                                <div class="modal-footer animation" data-animation-effect="fadeInUp" data-animation-delay=".3s">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End of Modal -->
+                </section>
+                <!-- Text content section -->
+                <section id="sec-text" data-bg="today.png">
+                    <div class="content-wrapper clearfix">
+
+                        <div class="animation" data-animation-effect="fadeIn" data-animation-delay="1s">
+                          
+                            <h4></h4>
+
+                            <!--p><button class="btn btn-custom btn-lg" data-toggle="modal" data-target="#modal-text"> </button></p>
+                        </div>
+                    </div>
+                </section>
+                <!-- offers section -->
+                <section id="sec-offer" data-bg="today.png">
+                    <div class="row">
+
+                        <div class="col-sm-4 animation" data-animation-effect="bounceIn">
+                            <a data-toggle="modal" data-target="#modal-text">
+                                <div class="offers">
+                                    <i data-effect-delay="0"><img src="force.jpeg"></i>
+          
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-4 animation" data-animation-effect="bounceIn" data-animation-delay=".2s">
+                            <a data-toggle="modal" data-target="#modal-text">
+                                <div class="offers">
+                                    <i data-effect-delay="200"><img src="force.jpeg"></i>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-4 animation" data-animation-effect="bounceIn" data-animation-delay=".4s">
+                            <a data-toggle="modal" data-target="#modal-text">
+                                <div class="offers">
+                                    <i  data-effect-delay="400"><img src="force.jpeg"></i>
+                                    <h2></h2>
+                                    <p></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- grid section -->
+                <!--section id="sec-grid" data-bg="https://s3.amazonaws.com/uneaty2/images/bg/bg-02.jpg">
+
+                    <div class="content-wrapper clearfix">
+                        <h1 class="section-title">Grid</h1>
+                        <div class="row grid-row">
+                            <div class="col-md-1 col-sm-1 col-xs-3 animation" data-animation-effect="zoomIn" data-animation-delay=".7s">
+                                <i class="glyphicon glyphicon-film"></i>
+                            </div>
+                            <div class="col-md-4 col-sm-5 col-xs-9 animation" data-animation-effect="fadeInLeft">
+                                <h4>Nunc in purus</h4>
+                                <p>Ut mattis velit ex, gravida volutpat augue mollis ac. Nunc in purus vel neque vehicula sagittis vel non quam. Morbi laoreet, est sit amet hendrerit mollis.</p>
+                            </div>
+                            <div class="col-md-1 col-md-offset-1 col-sm-1 col-xs-3 animation" data-animation-effect="zoomIn" data-animation-delay=".7s">
+                                <i class="glyphicon glyphicon-music"></i>
+                            </div>
+                            <div class="col-md-4 col-sm-5 col-xs-9 animation" data-animation-effect="fadeInLeft">
+                     </div>
+                        </div>
+
+                        <div class="row grid-row">
+                            <div class="col-md-1 col-sm-1 col-xs-3 animation" data-animation-effect="zoomIn" data-animation-delay=".7s">
+                                <i class="glyphicon glyphicon-headphones"></i>
+                            </div>
+                            <div class="col-md-4 col-sm-5 col-xs-9 animation" data-animation-effect="fadeInLeft">
+            </div>
+                            <div class="col-md-1 col-md-offset-1 col-sm-1 col-xs-3 animation" data-animation-effect="zoomIn" data-animation-delay=".7s">
+                                <i class="glyphicon glyphicon-camera"></i>
+                            </div>
+                            <div class="col-md-4 col-sm-5 col-xs-9 animation" data-animation-effect="fadeInLeft">
+                       </div>
+                        </div>
+                    </div>
+                </section-->
+                <!-- testimonials section -->
+                <!--section id="sec-testimonials" data-bg="https://s3.amazonaws.com/uneaty2/images/bg/bg-05.jpg">
+                    <h2>Testimonials</h2>
+                    <div id="testCarousel" class="carousel slide animation" data-animation-effect="fadeIn" data-ride="carousel">
+                        <div class="header">
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="slider-caption">
+                                    <blockquote>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper diam nec augue semper, in dignissim elit hendrerit. Quisque tempus arcu vulputate metus convallis elementum. Aenean rhoncus rutrum quam ut semper. </p>
+                                        <small>Lorem ipsum</small>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="slider-caption">
+                                    <blockquote>
+                                        <p>Consectetur adipiscing elit. Maecenas ullamcorper diam nec augue semper, in dignissim elit hendrerit. Quisque tempus arcu vulputate metus convallis elementum. Aenean rhoncus rutrum quam ut semper.</p>
+                                        <small>Lorem ipsum</small>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="slider-caption">
+                                    <blockquote>
+                                        <p>Lorem ipsum dolor sit amet. Maecenas ullamcorper diam nec augue semper, in dignissim elit hendrerit. Quisque tempus arcu vulputate metus convallis elementum. Aenean rhoncus rutrum quam ut semper.</p>
+                                        <small>Lorem ipsum</small>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#testCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#testCarousel" data-slide-to="1"></li>
+                            <li data-target="#testCarousel" data-slide-to="2"></li>
+                        </ol>
+
+                    </div>
+                </section-->
+
+                <section id="sec-contact" data-bg="today.png">
+                    <h1 class="animation" data-animation-delay=".20s" data-animation-effect="fadeInLeft"></h1>
+                    <!-- form validation script is located at the end of this document -->
+                    <div class="row">
+                        <div class="col-md-4 animation" data-animation-effect="fadeInLeft" data-animation-delay=".3s">
+                            <address>
+        
+                                <p>
+                                    <abbr title="Our Phone Number">+266 57787521</abbr>
+                                </p>
+                                <p>
+                                    <a href="mailto:uneaty@example.com">tenkileeto@gmail.com</a>
+                                </p>
+                            </address>
+                        </div>
+                        <div class="col-md-8">
+                            <form role="form" id="contact-form">
+                                <div class="form-group animation" data-animation-effect="fadeIn" data-animation-delay=".2s" data-animation-duration="1s">
+                                    <div class="input-group">
+                                        <div class="input-group-addon input-group-addon-custom"><i class="glyphicon glyphicon-user"></i></div>
+                                        <input type="text" class="form-control" name="InputName" placeholder="Your name...">
+                                    </div>
+                                </div>
+                                <div class="form-group animation" data-animation-effect="fadeIn" data-animation-delay=".3s" data-animation-duration="1s">
+                                    <div class="input-group">
+                                        <div class="input-group-addon input-group-addon-custom"><i class="glyphicon glyphicon-envelope"></i></div>
+                                        <input type="email" class="form-control" name="InputEmail" placeholder="Your email..." required>
+                                    </div>
+                                </div>
+                                <div class="form-group animation" data-animation-effect="fadeIn" data-animation-delay=".4s" data-animation-duration="1s">
+                                    <div class="input-group">
+                                        <div class="input-group-addon input-group-addon-custom"><i class="glyphicon glyphicon-earphone"></i></div>
+                                        <input type="tel" class="form-control" name="InputPhone" placeholder="Your phone...">
+                                    </div>
+                                </div>
+                                <div class="form-group message animation" data-animation-effect="fadeIn" data-animation-delay=".5s" data-animation-duration="1s">
+                                    <textarea class="form-control" rows="4" name="InputMessage" placeholder="Message" required></textarea>
+                                </div>
+                                <div class="form-group row animation" data-animation-effect="fadeIn" data-animation-delay=".7s" data-animation-duration="1s">
+                                    <button id="contact-submit" type="submit" class="btn btn-custom">SEND MESSAGE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- contact modal for successfull submission -->
+                    <div class="modal fade" id="contact-success-modal" tabindex="-1" role="dialog" aria-labelledby="modal-textLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title">Contact Form</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>Thank you</h1>
+                                    <p> MATHE A LINOTSI</p>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-custom" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page footer with copyright and social links -->
+                    <div class="footer">                        <div class="row">
+                            <div class="col-md-4 col-md-offset-3 copyright">2022 
+                                <i class="fa fa-copyright"></i>  Copyright FORCE INNOVATION AREA
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-3 social">
+                                <a href="#" data-toggle="tooltip" data-original-title="Facebook Page" data-placement="left"><i class="fa fa-facebook-square fa-lg"></i></a>
+                                <a href="#" data-toggle="tooltip" data-original-title="Follow on Twitter" data-placement="top"><i class="fa fa-twitter-square fa-lg"></i></a>
+                                <a href="#" data-toggle="tooltip" data-original-title="Linkedin Resume" data-placement="bottom"><i class="fa fa-linkedin-square fa-lg"></i></a>
+                                <a href="#" data-toggle="tooltip" data-original-title="Flickr Account" data-placement="top"><i class="fa fa-flickr fa-lg"></i></a>
+                                <a href="#" data-toggle="tooltip" data-original-title="Pins on Pinterest" data-placement="right"><i class="fa fa-pinterest-square fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--/right-->
+        </div>
+        <!--/row-->
+    </div>
+    <!--/main-->
+    <div id="scroll-top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </div>
+    <!-- Scripts placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.easing.1.3.min.js"></script>
+    <script src="assets/js/jquery.mixitup.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/jquery-validate.bootstrap-tooltip.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        //validation for contact form
+        $().ready(function () {
+            $("#contact-form").validate({
+                //add rules for any input here
+                rules: {
+                    InputEmail: { required: true, email: true }
+                },
+                //custom alert messages as tooltip
+                messages: {
+                    InputEmail: "Please enter your email address.",
+                    InputMessage: "Please enter your message to us."
+                },
+                submitHandler: function (form) {
+                    // sucessfull validation of contact form
+                    $('#contact-success-modal').modal();
+                },
+                invalidHandler: function (form, validator) {
+                    // unsucessfull validation of contact form
+                    // put your error handling logic here
+                }
+            });
+        });
+    </script>
+</body>
+</html>
